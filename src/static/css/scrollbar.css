@@ -1,0 +1,53 @@
+.scrollbar-transition, .scrollbar__scrollbar-vertical, .scrollbar__scrollbar-horizontal {
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+  .scrollbar-transition--scrollbar {
+    transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+  }
+  
+  .scrollbar__wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: white;
+  }
+  .scrollbar__wrapper:hover .scrollbar__scrollbar-vertical, .scrollbar__wrapper:hover .scrollbar__scrollbar-horizontal {
+    opacity: 1;
+  }
+  .scrollbar__scrollbar-vertical, .scrollbar__scrollbar-horizontal {
+    opacity: 0.5;
+    position: absolute;
+    background: transparent;
+  }
+  .scrollbar__scrollbar-vertical:hover, .scrollbar__scrollbar-horizontal:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .scrollbar__scrollbar-vertical .scrollbar, .scrollbar__scrollbar-horizontal .scrollbar {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: default;
+  }
+  .scrollbar__scrollbar-vertical {
+    width: 15px;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  .scrollbar__scrollbar-vertical .scrollbar {
+    width: 15px;
+  }
+  .scrollbar__scrollbar-horizontal {
+    height: 15px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+  .scrollbar__scrollbar-horizontal .scrollbar {
+    height: 15px;
+  }
